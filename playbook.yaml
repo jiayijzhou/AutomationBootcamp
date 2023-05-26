@@ -1,0 +1,17 @@
+- name: print I like
+  hosts: web
+  vars:
+    one: "I like"
+
+  tasks:
+    - name: print {{ one }}  
+      debug:
+        msg: "{{ one }} the seaside."
+
+    - name: print best food
+      debug:
+        msg: "My favourite food is: {{ best_food }}."
+
+    - name: print worst drink
+      debug:
+        msg: "In {{ hostname }}'s opinion {{ drink }} is the worst drink"
